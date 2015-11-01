@@ -1,0 +1,161 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* sprite */
+.info-boxcomp-plate-graybasic, .info-boxdottedhozline, .nav-prev .nav-btn, .nav-next .nav-btn, .nav-prev.nav-last .nav-btn, .nav-next.nav-last .nav-btn, .info-boxbtn-ic-brn-left, .info-boxbtn-ic-brn-right, .info-boxbtn-ic-gray-left, .info-boxbtn-ic-gray-right, .info-boxarrowside
+{ display: inline-block; background: url('src/img/sprite.png') no-repeat; overflow: hidden; text-align: left; }
+
+.info-boxcomp-plate-graybasic { background-position: -5px -0px; width: 323px; height: 337px; }
+.info-boxdottedhozline { background-position: -5px -342px; width: 274px; height: 1px; }
+.nav-prev .nav-btn { background-position: -5px -348px; width: 48px; height: 26px; }
+.nav-next .nav-btn { background-position: -78px -348px; width: 48px; height: 26px; }
+.nav-prev.nav-last .nav-btn { background-position: -151px -348px; width: 48px; height: 26px; }
+.nav-next.nav-last .nav-btn { background-position: -224px -348px; width: 48px; height: 26px; }
+.info-boxbtn-ic-brn-left { background-position: -297px -348px; width: 12px; height: 10px; }
+.info-boxbtn-ic-brn-right { background-position: -297px -363px; width: 12px; height: 10px; }
+.info-boxbtn-ic-gray-left { background-position: -297px -378px; width: 12px; height: 10px; }
+.info-boxbtn-ic-gray-right { background-position: -5px -379px; width: 12px; height: 10px; }
+.info-boxarrowside { background-position: -22px -379px; width: 10px; height: 10px; }
+
+/* EO sprite */
+body {
+    font: 12px/16px 'Times New Roman', serif;
+    color: #333;
+}
+h1, h2, h3 {
+    font-family: Arial, sans-serif;
+}
+h2 {
+    font-size: 16px;
+    margin: 6px 0;
+    color: #ff6200;
+    font-weight: bold;
+}
+.controls a {
+    text-decoration: none;
+}
+.info-box-container {
+    padding: 30px;
+}
+.info-box {
+    width: 312px;
+    border: 1px solid #f7f7f7;
+    border-radius: 4px;
+    background-color: #fff;
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(204,204,204,1);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(204,204,204,1);
+    box-shadow: 3px 3px 5px 0px rgba(204,204,204,1);
+}
+.info-box-image {
+    min-height: 200px;
+}
+.info-box-image img {
+    width: 100%;
+}
+.info-box-content {
+    margin: 0 0 12px;
+    padding: 0 8px;
+}
+.more-link {
+    color: #ff6200;
+    text-decoration: underline;
+}
+.more-link:hover {
+    text-decoration: none;
+}
+.info-box-controls {
+    margin: 0 0 5px;
+    padding: 0 8px;
+}
+.controls-item {
+    display: inline-block;
+    width: 60%;
+    vertical-align: top;
+    font-size: 14px;
+}
+.info-box-buy {
+    width: 40%;
+    text-align: right;
+}
+.info-box-buy a {
+    color: #ff6200;
+    line-height: 26px;
+}
+.info-box-buy a:after {
+    content: '\25BA';
+    margin: 0 0 0 5px;
+}
+
+.nav-link {
+    position: relative;
+    display: inline-block;
+}
+.nav-btn {
+    padding: 0 0 0 20px;
+    text-align: center !important;
+    line-height: 26px;
+    margin-right: 2px;
+    color: #fff;
+}
+.nav-last .nav-btn {
+    color: #bebebe;
+}
+.nav-next .nav-btn {
+    padding: 0 20px 0 0;
+}
+.nav-ico {
+    position: absolute;
+    left: 5px;
+    top: 9px;
+}
+.nav-next .nav-ico {
+    right: 6px;
+    left: auto;
+}
+
+
