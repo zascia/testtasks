@@ -7,7 +7,8 @@ requirejs.config({
   paths: {
     infoBox: '../js/modules/infoBox',
     underscore: '../js/lib/underscore-min',
-    jquery: '../js/lib/jquery.min'
+    jquery: '../js/lib/jquery.min',
+    carousel: '../js/modules/carousel'
   }
 });
 
