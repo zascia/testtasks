@@ -47,7 +47,7 @@ table {
     border-spacing: 0;
 }
 /* sprite */
-.info-boxcomp-plate-graybasic, .info-boxdottedhozline, .nav-prev .nav-btn, .nav-next .nav-btn, .nav-prev.nav-last .nav-btn, .nav-next.nav-last .nav-btn, .info-boxbtn-ic-brn-left, .info-boxbtn-ic-brn-right, .info-boxbtn-ic-gray-left, .info-boxbtn-ic-gray-right, .info-boxarrowside
+.info-boxcomp-plate-graybasic, .info-boxdottedhozline, .nav-prev .nav-btn, .nav-next .nav-btn, .nav-prev.nav-last .nav-btn, .nav-next.nav-last .nav-btn, .nav-prev .nav-ico, .nav-next .nav-ico, .nav-prev.nav-last .nav-ico, .nav-next.nav-last .nav-ico, .info-boxarrowside
 { display: inline-block; background: url('src/img/sprite.png') no-repeat; overflow: hidden; text-align: left; }
 
 .info-boxcomp-plate-graybasic { background-position: -5px -0px; width: 323px; height: 337px; }
@@ -56,10 +56,10 @@ table {
 .nav-next .nav-btn { background-position: -78px -348px; width: 48px; height: 26px; }
 .nav-prev.nav-last .nav-btn { background-position: -151px -348px; width: 48px; height: 26px; }
 .nav-next.nav-last .nav-btn { background-position: -224px -348px; width: 48px; height: 26px; }
-.info-boxbtn-ic-brn-left { background-position: -297px -348px; width: 12px; height: 10px; }
-.info-boxbtn-ic-brn-right { background-position: -297px -363px; width: 12px; height: 10px; }
-.info-boxbtn-ic-gray-left { background-position: -297px -378px; width: 12px; height: 10px; }
-.info-boxbtn-ic-gray-right { background-position: -5px -379px; width: 12px; height: 10px; }
+.nav-prev .nav-ico { background-position: -297px -348px; width: 12px; height: 10px; }
+.nav-next .nav-ico { background-position: -297px -363px; width: 12px; height: 10px; }
+.nav-prev.nav-last .nav-ico { background-position: -297px -378px; width: 12px; height: 10px; }
+.nav-next.nav-last .nav-ico { background-position: -5px -379px; width: 12px; height: 10px; }
 .info-boxarrowside { background-position: -22px -379px; width: 10px; height: 10px; }
 
 /* EO sprite */
@@ -124,11 +124,32 @@ h2 {
 }
 .info-box-buy a {
     color: #ff6200;
+    display: inline-block;
+    width: 98px;
+    height: 26px;
     line-height: 26px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding-right: 20px;
+    text-align: center;
+    position: relative;
+}
+.info-box-buy a:before {
+    content: '|';
+    position: absolute;
+    width: 0;
+    font-size: 0;
+    line-height: 0;
+    height: 25px;
+    right: 25px;
+    top: 0;
+    border: 1px solid #ccc;
 }
 .info-box-buy a:after {
     content: '\25BA';
-    margin: 0 0 0 5px;
+    position: absolute;
+    right: 5px;
+    top: 0;
 }
 
 .nav-link {
