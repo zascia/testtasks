@@ -83,7 +83,9 @@ h2 {
     padding: 30px;
 }
 .info-box {
+    position: relative;
     width: 312px;
+    min-height: 359px;
     border: 1px solid #f7f7f7;
     border-radius: 4px;
     background-color: #fff;
@@ -101,6 +103,11 @@ h2 {
     margin: 0 0 12px;
     padding: 0 8px;
 }
+.info-box-details {
+    display: none;
+    color: gray;
+    margin-top: 5px;
+}
 .more-link {
     color: #ff6200;
     text-decoration: underline;
@@ -108,9 +115,16 @@ h2 {
 .more-link:hover {
     text-decoration: none;
 }
+.hide-details {
+    display: none;
+}
 .info-box-controls {
     margin: 0 0 5px;
     padding: 0 8px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 .controls-item {
     display: inline-block;
@@ -135,6 +149,10 @@ h2 {
     padding-right: 20px;
     text-align: center;
     position: relative;
+}
+.info-box-buy a:hover {
+    color: #fff;
+    background-color: #ff6200;
 }
 .info-box-buy a:before {
     content: '|';
