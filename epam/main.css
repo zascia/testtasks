@@ -103,6 +103,9 @@ h2 {
     margin: 0 0 12px;
     padding: 0 8px;
 }
+.info-box-content.activated {
+    padding: 20px 8px 0;
+}
 .info-box-details {
     display: none;
     color: gray;

@@ -11,9 +11,10 @@ define(['underscore', 'jquery'], function(_, $) {
 
         function showDetails(obj) {
             var currentActive = obj;
-            $(currentActive).find('.info-box-image').toggle('50');
-            $(currentActive).find('.info-box-details').toggle('50');
-            $(currentActive).find('.more-link').toggle('50');
+            $(currentActive).find('.info-box-content').toggleClass('activated');
+            $(currentActive).find('.info-box-image').toggle();
+            $(currentActive).find('.info-box-details').toggle();
+            $(currentActive).find('.more-link').toggle();
         }
 
         $(currentActive).show();
