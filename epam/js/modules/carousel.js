@@ -29,13 +29,13 @@ define(['underscore', 'jquery'], function(_, $) {
             $(currentActive).one('click', '.nav-link', singleClick);
             $(currentActive).on('click', '.more-link', function(e) {
                 e.preventDefault();
-                showDetails($(currentActive));
+                if ( $(this).is(':visible') ) showDetails($(currentActive));
             });
         });
 
         $(currentActive).on('click', '.more-link', function(e) {
             e.preventDefault();
-            showDetails($(currentActive));
+            if ( $(this).is(':visible') ) showDetails($(currentActive));
         });
 
     };
