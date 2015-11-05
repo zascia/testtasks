@@ -1,0 +1,17 @@
+/* old ie shadow */
+.info-box {
+    background: url('src/img/sprite.png') no-repeat;
+    background-position: -5px 23px;
+    width: 323px;
+    height: 337px;
+    border: 0;
+}
+.info-box-image {
+    margin-right: 4px;
+}
+
+/* ie7 inline-block*/
+.controls-item {
+    //display: inline;
+    //zoom: 1;
+}

@@ -5,10 +5,13 @@
 requirejs.config({
   baseUrl: 'js',
   paths: {
-    infoBox: '../js/modules/infoBox',
+    modernizr: '../js/lib/modernizr',
+    pie: '../js/lib/PIE',
     underscore: '../js/lib/underscore-min',
     jquery: '../js/lib/jquery.min',
+    infoBox: '../js/modules/infoBox',
     carousel: '../js/modules/carousel'
+    // fixIE: '../js/modules/fixIE'
   }
 });
 
