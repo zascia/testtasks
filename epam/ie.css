@@ -1,15 +1,24 @@
 /* old ie shadow */
 .info-box {
     background: url('src/img/sprite.png') no-repeat;
-    background-position: -5px 23px;
+    background-position: -5px 0px;
     width: 323px;
     height: 337px;
+    min-height: auto;
     border: 0;
 }
 .info-box-image {
     margin-right: 4px;
+    min-height: auto;
+    height: 180px;
+    overflow:hidden;
 }
-
+.info-box-image img {
+    max-height: 100%;
+}
+.info-box-controls {
+    bottom: 5px;
+}
 /* ie7 inline-block*/
 .controls-item {
     //display: inline;
