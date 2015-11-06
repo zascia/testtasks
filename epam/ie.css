@@ -1,6 +1,6 @@
 /* old ie shadow */
 .info-box {
-    background: url('src/img/sprite.png') no-repeat;
+    background: transparent url('src/img/sprite.png') no-repeat;
     background-position: -5px 0px;
     width: 323px;
     height: 337px;
@@ -8,10 +8,11 @@
     border: 0;
 }
 .info-box-image {
-    margin-right: 4px;
+    padding: 3px 4px 0 2px;
     min-height: auto;
     height: 180px;
     overflow:hidden;
+    text-align: center;
 }
 .info-box-image img {
     max-height: 100%;
