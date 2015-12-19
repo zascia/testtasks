@@ -294,20 +294,19 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
-    'copy:server',
+    //'copy:server',
     'useminPrepare',
-    'concurrent',
+    // 'concurrent',
+    'less',
     'cssmin',
     'concat',
-    'uglify',
-    'copy',
-    'rev',
-    'usemin'
+    'uglify'
+    //'copy',
+    //'rev',
+    //'usemin'
   ]);
 
   grunt.registerTask('default', [
-    'jshint',
-    'test',
     'build'
   ]);
 };

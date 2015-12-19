@@ -14,28 +14,35 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+    <!--[if gte IE 9]>
+    <style type="text/css">
+      .gradient {
+        filter: none;
+      }
+    </style>
+    <![endif]-->
   </head>
   <body>
     <div class="wrapper">
       <header class="container">
         <div class="row">
           <div class="col-sm-8">
-            <ul class="nav nav-pills">
-              <li role="presentation"><a class="btn btn-default" href="#"><span aria-hidden="true" class="glyphicon glyphicon-lock"></span> One</a></li>
-              <li role="presentation"><a class="btn btn-primary" href="#"><span aria-hidden="true" class="glyphicon glyphicon-plane"></span> Two</a></li>
-              <li role="presentation"><a class="btn btn-success" href="#"><span aria-hidden="true" class="glyphicon glyphicon-inbox"></span> Three</a></li>
-              <li role="presentation"><a class="btn btn-info" href="#"><span aria-hidden="true" class="glyphicon glyphicon-wrench"></span> Four</a></li>
+            <ul class="nav nav-pills top-nav">
+              <li role="presentation" class="top-nav-item"><a class="btn btn-primary" href="#"><span aria-hidden="true" class="glyphicon glyphicon-lock"></span> One</a></li>
+              <li role="presentation" class="top-nav-item"><a class="btn btn-success" href="#"><span aria-hidden="true" class="glyphicon glyphicon-plane"></span> Two</a></li>
+              <li role="presentation" class="top-nav-item"><a class="btn btn-info" href="#"><span aria-hidden="true" class="glyphicon glyphicon-inbox"></span> Three</a></li>
+              <li role="presentation" class="top-nav-item"><a class="btn btn-warning" href="#"><span aria-hidden="true" class="glyphicon glyphicon-wrench"></span> Four</a></li>
             </ul>
           </div>
           <div class="col-sm-4">
             <div class="login-area pull-right">
               <div>
-                <div class="input-group search-input annonce-search-form-item">
+                <div class="input-group">
                   <input type="text" class="form-control" placeholder="">
                   <span class="input-group-btn">
-                      <span aria-hidden="true" class="glyphicon glyphicon-search"></span>
+                    <button class="btn btn-default" type="button"><span aria-hidden="true" class="glyphicon glyphicon-search"></span></button>
                   </span>
-                </div>
+                </div><!-- /input-group -->
                 <div>
                   <ul class="list-inline">
                     <li><a href="#" title="">Login</a></li>
@@ -62,16 +69,20 @@
             </ul>
           </nav>
 
-          <div class="row">
+          <div class="row hero-offer-container">
             <div class="col-sm-5">
-              <div class="panel panel-primary">
+              <div class="panel panel-primary hero-offer-wrapper">
                 <div class="panel-heading">
-                  <h3 class="panel-title">Amazing summer holiday deals</h3>
+                  <h3 class="panel-title hero-offer-title">Amazing summer holiday deals</h3>
                 </div>
                 <div class="panel-body">
-                  <p>Holidays from - £379</p>
-                  <p>Short breaks from - £249</p>
-                  <p><a class="btn btn-primary btn-large">Learn more</a></p>
+                  <div class="hero-offer-details">
+                    <p>Holidays from - £379</p>
+                    <p>Short breaks from - £249</p>
+                  </div>
+                  <div class="hero-offer-control">
+                    <a class="btn btn-primary btn-large">Learn more</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -113,7 +124,7 @@
         </div>
       </section>
 
-      <section class="search-filters-options">
+      <section class="search-filters-options gradient">
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
@@ -173,65 +184,49 @@
 
 
       <section class="container media-list-block">
-        <div class="row">
+        <div class="row media-list-wrapper">
           <div class="col-sm-6 col-md-3">
-            <div class="thumbnail"><img alt="100%x200" data-src="holder.js/100%x200"
-                                        style="height: 200px; width: 100%; display: block;"
-                                        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDI0MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MjAwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTUxYWZmNGIzY2QgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMnB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNTFhZmY0YjNjZCI+PHJlY3Qgd2lkdGg9IjI0MiIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI4OS44NTAwMDAzODE0Njk3MyIgeT0iMTA1LjciPjI0MngyMDA8L3RleHQ+PC9nPjwvZz48L3N2Zz4="
-                                        data-holder-rendered="true">
-
-              <div class="caption"><h3>Thumbnail label</h3>
-
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at
-                  eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-
-                <p><a role="button" class="btn btn-primary" href="#">Button</a> <a role="button" class="btn btn-default"
-                                                                                   href="#">Button</a></p></div>
+            <div class="thumbnail media-list-item">
+              <img class="media-list-image" alt="100%x200" src="./images/teaser.gif" data-holder-rendered="true">
+              <div class="caption media-list-info">
+                <h3 class="media-list-title">Group booking</h3>
+                <p>Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commod...</p>
+              </div>
+              <div class="media-list-control"><a role="button" class="btn btn-default" href="#">Learn more</a></div>
             </div>
           </div>
           <div class="col-sm-6 col-md-3">
-            <div class="thumbnail"><img alt="100%x200" data-src="holder.js/100%x200"
-                                        style="height: 200px; width: 100%; display: block;"
-                                        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDI0MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MjAwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTUxYWZmNGQ2NDEgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMnB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNTFhZmY0ZDY0MSI+PHJlY3Qgd2lkdGg9IjI0MiIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI4OS44NTAwMDAzODE0Njk3MyIgeT0iMTA1LjciPjI0MngyMDA8L3RleHQ+PC9nPjwvZz48L3N2Zz4="
-                                        data-holder-rendered="true">
-
-              <div class="caption"><h3>Thumbnail label</h3>
-
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at
-                  eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-
-                <p><a role="button" class="btn btn-primary" href="#">Button</a> <a role="button" class="btn btn-default"
-                                                                                   href="#">Button</a></p></div>
+            <div class="thumbnail media-list-item">
+              <img class="media-list-image" alt="100%x200" src="./images/teaser.gif" data-holder-rendered="true">
+              <div class="caption media-list-info">
+                <h3 class="media-list-title">Order a brochure</h3>
+                <p>Rulla ligula sapien, congue vel semper at viverra in lorem.</p>
+              </div>
+              <div class="media-list-control"><a role="button" class="btn btn-default" href="#">Request a brochure</a></div>
             </div>
           </div>
           <div class="col-sm-6 col-md-3">
-            <div class="thumbnail"><img alt="100%x200" data-src="holder.js/100%x200"
-                                        style="height: 200px; width: 100%; display: block;"
-                                        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDI0MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MjAwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTUxYWZmNGI0YjMgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMnB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNTFhZmY0YjRiMyI+PHJlY3Qgd2lkdGg9IjI0MiIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI4OS44NTAwMDAzODE0Njk3MyIgeT0iMTA1LjciPjI0MngyMDA8L3RleHQ+PC9nPjwvZz48L3N2Zz4="
-                                        data-holder-rendered="true">
-
-              <div class="caption"><h3>Thumbnail label</h3>
-
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at
-                  eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-
-                <p><a role="button" class="btn btn-primary" href="#">Button</a> <a role="button" class="btn btn-default"
-                                                                                   href="#">Button</a></p></div>
+            <div class="thumbnail media-list-item">
+              <img class="media-list-image" alt="100%x200" src="./images/teaser.gif" data-holder-rendered="true">
+              <div class="caption media-list-info">
+                <h3 class="media-list-title">Newsletter sign-up</h3>
+                <p>Rulla ligula sapien, congue vel semper at viverra in lorem.</p>
+                <div class="form-group">
+                  <label class="sr-only">Email address</label>
+                  <input type="text" class="form-control" placeholder="Enter your email address">
+                </div>
+              </div>
+              <div class="media-list-control"><a href="#" title="">Read our Privacy Policy</a><a role="button" class="btn btn-default" href="#">Sing up</a></div>
             </div>
           </div>
           <div class="col-sm-6 col-md-3">
-            <div class="thumbnail"><img alt="100%x200" data-src="holder.js/100%x200"
-                                        style="height: 200px; width: 100%; display: block;"
-                                        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDI0MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MjAwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTUxYWZmNGI0YjMgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMnB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNTFhZmY0YjRiMyI+PHJlY3Qgd2lkdGg9IjI0MiIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI4OS44NTAwMDAzODE0Njk3MyIgeT0iMTA1LjciPjI0MngyMDA8L3RleHQ+PC9nPjwvZz48L3N2Zz4="
-                                        data-holder-rendered="true">
-
-              <div class="caption"><h3>Thumbnail label</h3>
-
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at
-                  eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-
-                <p><a role="button" class="btn btn-primary" href="#">Button</a> <a role="button" class="btn btn-default"
-                                                                                   href="#">Button</a></p></div>
+            <div class="thumbnail media-list-item">
+              <img class="media-list-image" alt="100%x200" src="./images/teaser.gif" data-holder-rendered="true">
+              <div class="caption media-list-info">
+                <h3 class="media-list-title">Morbi varius sem</h3>
+                <p>Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commod.</p>
+              </div>
+              <div class="media-list-control"><a role="button" class="btn btn-default" href="#">Play now</a></div>
             </div>
           </div>
         </div>
