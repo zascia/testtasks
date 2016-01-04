@@ -26,7 +26,7 @@
     <div class="wrapper">
       <header class="container">
         <div class="row">
-          <div class="col-sm-8">
+          <div class="col-sm-9">
             <ul class="nav nav-pills top-nav">
               <li role="presentation" class="top-nav-item"><a class="btn btn-primary" href="#"><span aria-hidden="true" class="glyphicon glyphicon-lock"></span> One</a></li>
               <li role="presentation" class="top-nav-item"><a class="btn btn-success" href="#"><span aria-hidden="true" class="glyphicon glyphicon-plane"></span> Two</a></li>
@@ -34,19 +34,18 @@
               <li role="presentation" class="top-nav-item"><a class="btn btn-warning" href="#"><span aria-hidden="true" class="glyphicon glyphicon-wrench"></span> Four</a></li>
             </ul>
           </div>
-          <div class="col-sm-4">
-            <div class="login-area pull-right">
-              <div>
+          <div class="col-sm-3">
+            <div class="login-area">
+              <div class="login-area-container">
                 <div class="input-group">
-                  <input type="text" class="form-control" placeholder="">
+                  <input type="text" class="form-control search-input" placeholder="">
                   <span class="input-group-btn">
                     <button class="btn btn-default" type="button"><span aria-hidden="true" class="glyphicon glyphicon-search"></span></button>
                   </span>
                 </div><!-- /input-group -->
-                <div>
+                <div class="login-area-links-container">
                   <ul class="list-inline">
-                    <li><a href="#" title="">Login</a></li>
-                    <li><a href="#" title="">Register</a></li>
+                    <li><a class="login-area-link" href="#" title="">Login</a></li><li><a class="login-area-link" href="#" title="">Register</a></li>
                   </ul>
                 </div>
               </div>
@@ -62,15 +61,9 @@
             <li data-target="#carousel-example-generic" data-slide-to="1"></li>
             <li data-target="#carousel-example-generic" data-slide-to="2"></li>
           </ol>
-          <nav>
-            <ul class="pager">
-              <li class="previous"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
-              <li class="next"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
-            </ul>
-          </nav>
 
           <div class="row hero-offer-container">
-            <div class="col-sm-5">
+            <div class="col-md-5">
               <div class="panel panel-primary hero-offer-wrapper">
                 <div class="panel-heading">
                   <h3 class="panel-title hero-offer-title">Amazing summer holiday deals</h3>
@@ -89,11 +82,11 @@
           </div>
 
           <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="icon-prev glyphicon glyphicon-menu-left" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
           </a>
           <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="icon-next glyphicon glyphicon-menu-right" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
 
@@ -129,7 +122,7 @@
           <div class="row">
             <div class="col-sm-12">
               <div class="form-inline">
-                <div class="form-group">
+                <div class="form-group choose-a-park-control">
                   <label class="control-label" for="select1">Choose a park</label>
                   <select id="select1" class="form-control annonce-search-form-item">
                     <option selected>All</option>
@@ -138,8 +131,8 @@
                     <option>4</option>
                     <option>5</option>
                   </select>
-                </div>
-                <div class="form-group">
+                </div><!--
+                --><div class="form-group select-date-control">
                   <label class="control-label" for="select2">When</label>
                   <select id="select2" class="form-control annonce-search-form-item">
                     <option selected>Select a date</option>
@@ -148,8 +141,8 @@
                     <option>4</option>
                     <option>5</option>
                   </select>
-                </div>
-                <div class="form-group">
+                </div><!--
+                --><div class="form-group select-duration-control">
                   <label class="control-label" for="select3">Duration</label>
                   <select id="select3" class="form-control annonce-search-form-item">
                     <option selected>7 nights</option>
@@ -158,8 +151,8 @@
                     <option>4</option>
                     <option>5</option>
                   </select>
-                </div>
-                <div class="form-group">
+                </div><!--
+                --><div class="form-group select-accomodation-control">
                   <label class="control-label" for="select4">Accomodation</label>
                   <select id="select4" class="form-control annonce-search-form-item">
                     <option selected>All</option>
@@ -168,12 +161,12 @@
                     <option>4</option>
                     <option>5</option>
                   </select>
-                </div>
-                <div class="form-group">
-                  <label class="control-label" for="input1">Choose a park</label>
-                  <input id="input1" class="form-control" type="text">
-                </div>
-                <div class="form-group">
+                </div><!--
+                --><div class="form-group input-your-postcode">
+                  <label class="control-label" for="input1">Where are you?</label>
+                  <input id="input1" class="form-control" type="text" placeholder="First 4 digits of Postcode">
+                </div><!--
+                --><div class="form-group search-filters-btn">
                   <button class="btn btn-default" type="submit">Search Holidays</button>
                 </div>
               </div>
@@ -184,49 +177,57 @@
 
 
       <section class="container media-list-block">
-        <div class="row media-list-wrapper">
-          <div class="col-sm-6 col-md-3">
-            <div class="thumbnail media-list-item">
-              <img class="media-list-image" alt="100%x200" src="./images/teaser.gif" data-holder-rendered="true">
-              <div class="caption media-list-info">
-                <h3 class="media-list-title">Group booking</h3>
-                <p>Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commod...</p>
-              </div>
-              <div class="media-list-control"><a role="button" class="btn btn-default" href="#">Learn more</a></div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-3">
-            <div class="thumbnail media-list-item">
-              <img class="media-list-image" alt="100%x200" src="./images/teaser.gif" data-holder-rendered="true">
-              <div class="caption media-list-info">
-                <h3 class="media-list-title">Order a brochure</h3>
-                <p>Rulla ligula sapien, congue vel semper at viverra in lorem.</p>
-              </div>
-              <div class="media-list-control"><a role="button" class="btn btn-default" href="#">Request a brochure</a></div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-3">
-            <div class="thumbnail media-list-item">
-              <img class="media-list-image" alt="100%x200" src="./images/teaser.gif" data-holder-rendered="true">
-              <div class="caption media-list-info">
-                <h3 class="media-list-title">Newsletter sign-up</h3>
-                <p>Rulla ligula sapien, congue vel semper at viverra in lorem.</p>
-                <div class="form-group">
-                  <label class="sr-only">Email address</label>
-                  <input type="text" class="form-control" placeholder="Enter your email address">
+        <div class="row row-same-height media-list-wrapper">
+          <div class="col-xs-6 col-md-3">
+            <div class="col-same-height">
+              <div class="thumbnail media-list-item">
+                <img class="img-responsive media-list-image" alt="100%x200" src="./images/teaser.gif" data-holder-rendered="true">
+                <div class="caption media-list-info">
+                  <h3 class="single-block-title media-list-title">Group booking</h3>
+                  <p>Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commod...</p>
                 </div>
+                <div class="col-full-height-control media-list-control"><a role="button" class="btn btn-default" href="#">Learn more</a></div>
               </div>
-              <div class="media-list-control"><a href="#" title="">Read our Privacy Policy</a><a role="button" class="btn btn-default" href="#">Sing up</a></div>
             </div>
           </div>
-          <div class="col-sm-6 col-md-3">
-            <div class="thumbnail media-list-item">
-              <img class="media-list-image" alt="100%x200" src="./images/teaser.gif" data-holder-rendered="true">
-              <div class="caption media-list-info">
-                <h3 class="media-list-title">Morbi varius sem</h3>
-                <p>Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commod.</p>
+          <div class="col-xs-6 col-md-3">
+            <div class="col-same-height">
+              <div class="thumbnail media-list-item">
+                <img class="img-responsive media-list-image" alt="100%x200" src="./images/teaser.gif" data-holder-rendered="true">
+                <div class="caption media-list-info">
+                  <h3 class="single-block-title media-list-title">Order a brochure</h3>
+                  <p>Rulla ligula sapien, congue vel semper at viverra in lorem.</p>
+                </div>
+                <div class="col-full-height-control media-list-control"><a role="button" class="btn btn-default" href="#">Request a brochure</a></div>
               </div>
-              <div class="media-list-control"><a role="button" class="btn btn-default" href="#">Play now</a></div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-md-3">
+            <div class="col-same-height">
+              <div class="thumbnail media-list-item">
+                <img class="img-responsive media-list-image" alt="100%x200" src="./images/teaser.gif" data-holder-rendered="true">
+                <div class="caption media-list-info">
+                  <h3 class="single-block-title media-list-title">Newsletter sign-up</h3>
+                  <p>Rulla ligula sapien, congue vel semper at viverra in lorem.</p>
+                  <div class="form-group">
+                    <label class="sr-only">Email address</label>
+                    <input type="text" class="form-control media-list-input-email" placeholder="Enter your email address">
+                  </div>
+                </div>
+                <div class="col-full-height-control media-list-control"><a href="#" class="privacy-policy-link" title="">Read our Privacy Policy</a><a role="button" class="btn btn-default sign-up-link" href="#">Sing up</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-md-3">
+            <div class="col-same-height">
+              <div class="thumbnail media-list-item">
+                <img class="img-responsive media-list-image" alt="100%x200" src="./images/teaser.gif" data-holder-rendered="true">
+                <div class="caption media-list-info">
+                  <h3 class="single-block-title media-list-title">Morbi varius sem</h3>
+                  <p>Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commod.</p>
+                </div>
+                <div class="col-full-height-control media-list-control"><a role="button" class="btn btn-default" href="#">Play now</a></div>
+              </div>
             </div>
           </div>
         </div>
@@ -235,13 +236,15 @@
       <section class="container video-block">
         <div class="row">
           <div class="col-sm-8">
-            <img class="img-responsive" src="./images/video.jpg">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe allowfullscreen="" src="//www.youtube.com/embed/zpOULjyy-n8?rel=0" class="embed-responsive-item"></iframe>
+            </div>
           </div>
           <div class="col-sm-4">
             <div class="cite-block">
               <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vulputate commodo erat a ultricies. Donec pretium fermentum velit</p>
+                <footer><cite>Aliquam dignissim aliquet diam</cite></footer>
               </blockquote>
               <div class="more-info">
                 <a class="btn btn-default" href="" title="">Read more</a>
@@ -251,71 +254,78 @@
         </div>
       </section>
 
-      <section class="container secondary-info-block">
-        <div class="row">
-          <div class="col-sm-4 links-list-block">
-            <h3>Top 5 questions being asked</h3>
-            <ul class="list-unstyled">
-              <li>
-                <a href="#" title="">Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et?</a>
-              </li>
-              <li>
-                <a href="#" title="">Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et?</a>
-              </li>
-              <li>
-                <a href="#" title="">Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et?</a>
-              </li>
-              <li>
-                <a href="#" title="">Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et?</a>
-              </li>
-              <li>
-                <a href="#" title="">Aenean euismod bibendum laoreet?</a>
-              </li>
-            </ul>
-            <a href="#" title="" class="btn btn-default">View all holiday questions</a>
-          </div>
-          <div class="col-sm-4 media-featured-block">
-            <h3>Featured park</h3>
-            <div class="media">
-              <div class="media-left">
-                <img alt="64x64" data-src="holder.js/64x64" class="media-object"
-                                                        style="width: 64px; height: 64px;"
-                                                        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTFiMDNiNTUzNCB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1MWIwM2I1NTM0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMi41IiB5PSIzNi44Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg=="
-                                                        data-holder-rendered="true">
-              </div>
-              <div class="media-body">
-                <p>Cras sit amet nibh libero.</p>
-                <p class="more-link"><a class="btn btn-default" href="#" title="">Learn more</a></p>
+      <section class="secondary-info-block">
+        <div class="container">
+          <div class="row row-same-height">
+            <div class="col-sm-6 col-md-4 links-list-block">
+              <div class="col-same-height">
+                <div class="col-same-height-inner">
+                  <h3 class="single-block-title">Top 5 questions being asked</h3>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="#" title="">Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et?</a>
+                    </li>
+                    <li>
+                      <a href="#" title="">Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et?</a>
+                    </li>
+                    <li>
+                      <a href="#" title="">Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et?</a>
+                    </li>
+                    <li>
+                      <a href="#" title="">Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et?</a>
+                    </li>
+                    <li>
+                      <a href="#" title="">Aenean euismod bibendum laoreet?</a>
+                    </li>
+                  </ul>
+                  <div class="col-full-height-control"><a href="#" title="" class="btn btn-default">View all holiday questions</a></div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-sm-4 media-list-block">
-            <h3>Upcoming availability</h3>
-            <div class="media">
-              <div class="media-left">
-                <img alt="64x64" data-src="holder.js/64x64" class="media-object"
-                                                        style="width: 64px; height: 64px;"
-                                                        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTFiMDNiNTUzNCB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1MWIwM2I1NTM0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMi41IiB5PSIzNi44Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg=="
-                                                        data-holder-rendered="true">
-              </div>
-              <div class="media-body">
-                <h4 class="media-heading">Media heading</h4>
-                <p>Cras sit amet nibh libero.</p>
-                <ins>$99</ins>
-                <p class="more-link"><a href="#" title="">Learn more</a></p>
+            <div class="col-sm-6 col-md-4 media-featured-block">
+              <div class="col-same-height">
+                <div class="col-same-height-inner">
+                  <h3 class="single-block-title">Featured park</h3>
+                  <div class="media">
+                    <div>
+                      <img class="img-responsive media-list-image" alt="100%x200" src="./images/teaser.gif" data-holder-rendered="true">
+                    </div>
+                    <div class="media-body">
+                      <p>Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo aoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo.</p>
+                    </div>
+                  </div>
+                  <div class="col-full-height-control"><a href="#" class="btn btn-default" role="button">View all holiday questions</a></div>
+                </div>
               </div>
             </div>
 
-            <div class="media">
-              <div class="media-left"><a href="#"> <img alt="64x64" data-src="holder.js/64x64" class="media-object"
-                                                        style="width: 64px; height: 64px;"
-                                                        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTFiMDNiNTUzNCB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1MWIwM2I1NTM0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMi41IiB5PSIzNi44Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg=="
-                                                        data-holder-rendered="true"> </a></div>
-              <div class="media-body">
-                <h4 class="media-heading">Media heading</h4>
-                <p>Cras sit amet nibh libero.</p>
-                <ins>$99</ins>
-                <p class="more-link"><a href="#" title="">Learn more</a></p>
+            <div class="col-sm-12 col-md-4 media-list-block">
+              <div class="col-same-height">
+                <div class="col-same-height-inner">
+                  <h3 class="single-block-title">Upcoming availability</h3>
+
+                  <div class="media">
+                    <div class="media-left"><a href="#" title=""><img alt="" class="media-object" src="images/media-pic.gif"></a></div>
+                    <div class="media-body">
+                      <h4 class="media-heading">Quisque rutrum sem est</h4>
+                      <p>Cras sit amet nibh libero.</p>
+                      <h5>Donec commodo</h5>
+                      <ins>£99.00</ins>
+                      <p class="more-link"><a href="#" title="">Learn more</a></p>
+                    </div>
+                  </div>
+
+                  <div class="media">
+                    <div class="media-left"><a href="#" title=""><img alt="" class="media-object" src="images/media-pic.gif"></a></div>
+                    <div class="media-body">
+                      <h4 class="media-heading">Quisque rutrum sem est</h4>
+                      <p>Cras sit amet nibh libero.</p>
+                      <h5>Donec commodo</h5>
+                      <ins>£99.00</ins>
+                      <p class="more-link"><a href="#" title="">Learn more</a></p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -353,5 +363,6 @@
         <script src="bower_components/bootstrap/js/collapse.js"></script>
         <script src="bower_components/bootstrap/js/tab.js"></script>
         <!-- endbuild -->
+
 </body>
 </html>
